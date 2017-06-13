@@ -53,7 +53,7 @@ $textmessage = isset($update->message->text)?$update->message->text:'';
 $txtmsg = $update->message->text;
 $reply = $update->message->reply_to_message->forward_from->id;
 $stickerid = $update->message->reply_to_message->sticker->file_id;
-$admin = 190647723;
+$admin = 365910979;
 $time= file_get_contents("http://api.roonx.com/date-time/?roonx=time");
 $date= file_get_contents("http://api.roonx.com/date-time/?roonx=date");
 $step = file_get_contents("data/".$from_id."/step.txt");
@@ -112,7 +112,7 @@ if(isset($update->callback_query)){
             'reply_markup'=>json_encode([
                 'inline_keyboard'=>[
                     [
-                        ['text'=>"به کانال ما بپیوندید",'url'=>"https://telegram.me/CLITEAM"]
+                        ['text'=>"سازنده",'url'=>"https://telegram.me/alit7005"]
                     ]
                 ]
             ])
@@ -129,7 +129,7 @@ if(isset($update->callback_query)){
             'reply_markup'=>json_encode([
                 'inline_keyboard'=>[
                     [
-                        ['text'=>"به کانال ما بپیوندید",'url'=>"https://telegram.me/CLITEAM"]
+                        ['text'=>"سازنده",'url'=>"https://telegram.me/alit7005"]
                     ]
                 ]
             ])
@@ -186,7 +186,7 @@ $token = $textmessage ;
 		$source = str_replace("[*BOTTOKEN*]",$token,$source);
 		$source = str_replace("190647723",$from_id,$source);
 		save("bots/$un/index.php",$source);	
-		file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://sherimusic.ir/tokhm/bots/$un/index.php");
+		file_get_contents("https://api.telegram.org/bot".$token."/setwebhook?url=https://alit7005.ir/reborn/bots/$un/index.php");
 
 var_dump(makereq('sendMessage',[
         	'chat_id'=>$update->message->chat->id,
